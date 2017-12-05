@@ -1,3 +1,43 @@
 page-list {
 
+  .background{
+    width:100%;
+    height:100%;
+    background:linear-gradient(10deg,#111A09,#496B27);
+  }
+  .scroll-content{
+    text-align:center;
+  }
+  .list{
+    background: rgba(232,230,230,0px);
+    border-radius: 10px;
+  }
+  .waste{
+    color: #FFFFFF;
+    background: rgba(232,230,230,0.6px);
+  }
+  .recycle{
+    color: #FFFFFF;
+    background: rgba(232,230,230,0.6px);
+  }
+  .popup-buttons .button{
+    background: rgba(232,230,230,0.6px) ;
+    color: #e6b400;
+  }
+  h1{
+    color: #FFF;
+    font-size: 2em;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: lighten;
+    padding-top: 30px;
+    margin-bottom:50px;
+  }
+  .camera{
+    height: 20px;
+    width: 20px;
+  }
+  .comments{
+    width: 50% -20px;
+  }
+
 }

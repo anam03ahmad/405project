@@ -1,3 +1,38 @@
 page-home {
 
+  .background{
+    width:100%;
+    height:100%;
+    background:linear-gradient(10deg,#111A09,#496B27);
+  }
+  .scroll-content{
+    text-align:center;
+  }
+  ion-card.card{
+    background: rgba(232,230,230,0.3px);
+    border-radius: 10px;
+  }
+  .item{
+    background: rgba(232,230,230,0px);
+  }
+  h1{
+    color: #FFF;
+    font-size: 2em;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: lighten;
+    padding-top: 30px;
+    margin-bottom:50px;
+  }
+  .ion-header{
+    color: #ffffff;
+  }
+
+  ion-icon {
+    color: #ffffff;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
 }

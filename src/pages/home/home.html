@@ -1,18 +1,37 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<!-- Home Page: List of Buildings -->
+<ion-content padding class="background">
+  <h1>Track Waste and Recycle Disposal</h1>
+  <ion-card>
+    <ion-card-header class="ion-header">
+        Zone: X
+    </ion-card-header>
+    <ion-card-content>
+        <ion-list no-lines>
+          <ion-card>
+            <button ion-item color='light' block outline (click)="onBuildingSelected('Building 1')">
+              <ion-icon name="ios-square-outline" item-start ></ion-icon>
+              <a> Building 1 </a>
+            </button>
+          </ion-card>
+          <ion-card>
+            <button ion-item color="light" block outline (click)="onBuildingSelected('Building 1')">
+              <ion-icon name="ios-square-outline" item-start ></ion-icon>
+              <a> Building 2 </a>
+            </button>
+          </ion-card>
+          <ion-card>
+            <button ion-item color="light" block outline (click)="onBuildingSelected('Building 1')">
+              <ion-icon name="ios-square-outline" item-start ></ion-icon>
+              <a> Building 3 </a>
+            </button>
+          </ion-card>
+          <ion-card>
+            <button ion-item color="light" block outline (click)="onBuildingSelected('Building 1')">
+              <ion-icon name="ios-square-outline" item-start ></ion-icon>
+              <a> Building 4 </a>
+            </button>
+          </ion-card>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

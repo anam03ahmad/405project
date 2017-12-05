@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
@@ -6,26 +7,22 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
-
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
+  building: string;
+  image: string;
+  options: CameraOptions = {
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.CAMERA,
+      encodingType: Camera.EncodingType.JPEG,
+      quality:100,
+      allowEdit: false,
+      saveToPhotoAlbum: false
     }
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera) {
+
+    this.building = this.navParams.get('param1');
+    this.ngzone = ngzone;
+
   }
 
   itemTapped(event, item) {
@@ -34,4 +31,15 @@ export class ListPage {
       item: item
     });
   }
+
+  async takePicture(): Promise<any>{
+    try {
+      this.image = await this.camera.getPicture(this.options);
+    }
+    catch(e){
+      console.log(e);
+    }
+  }
+
+
 }

@@ -2,5 +2,7 @@
   "name": "405project",
   "app_id": "db102a58",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
